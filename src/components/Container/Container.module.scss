@@ -1,0 +1,13 @@
+@layer ui {
+  .root {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--ui-space-4);
+  }
+
+  .sm { max-width: var(--ui-container-sm); }
+  .md { max-width: var(--ui-container-md); }
+  .lg { max-width: var(--ui-container-lg); }
+  .full { max-width: none; }
+}

@@ -1,0 +1,49 @@
+@use '../../styles/mixins' as *;
+
+@layer ui {
+  .root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ui-space-1);
+    font-family: var(--ui-font-family);
+  }
+
+  .label {
+    font-size: var(--ui-font-size-sm);
+    color: var(--ui-color-text);
+  }
+
+  .field {
+    padding: var(--ui-space-2) var(--ui-space-3);
+    font: inherit;
+    font-size: var(--ui-font-size-md);
+    color: var(--ui-color-text);
+    background: var(--ui-color-surface);
+    border: 1px solid var(--ui-color-border);
+    border-radius: var(--ui-radius-md);
+    transition: border-color var(--ui-transition);
+
+    &:focus-visible {
+      @include focus-ring;
+      border-color: var(--ui-color-primary);
+    }
+
+    &:disabled {
+      @include disabled;
+    }
+  }
+
+  .invalid {
+    border-color: var(--ui-color-danger);
+
+    &:focus-visible {
+      outline-color: var(--ui-color-danger);
+      border-color: var(--ui-color-danger);
+    }
+  }
+
+  .error {
+    font-size: var(--ui-font-size-sm);
+    color: var(--ui-color-danger);
+  }
+}

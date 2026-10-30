@@ -1,0 +1,51 @@
+@use '../../styles/mixins' as *;
+
+@layer ui {
+  .root {
+    @include reset-button;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--ui-space-2);
+    font-family: var(--ui-font-family);
+    border-radius: var(--ui-radius-md);
+    transition: background-color var(--ui-transition), border-color var(--ui-transition);
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+
+    &:disabled {
+      @include disabled;
+    }
+  }
+
+  .sm {
+    padding: var(--ui-space-1) var(--ui-space-3);
+    font-size: var(--ui-font-size-sm);
+  }
+
+  .md {
+    padding: var(--ui-space-2) var(--ui-space-4);
+    font-size: var(--ui-font-size-md);
+  }
+
+  .primary {
+    background: var(--ui-color-primary);
+    color: var(--ui-color-on-primary);
+
+    &:hover:not(:disabled) {
+      background: var(--ui-color-primary-hover);
+    }
+  }
+
+  .secondary {
+    background: var(--ui-color-surface);
+    color: var(--ui-color-text);
+    border: 1px solid var(--ui-color-border);
+
+    &:hover:not(:disabled) {
+      border-color: var(--ui-color-primary);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use '../../styles/mixins' as *;
+
+@layer ui {
+  .root {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @for $i from 1 through 12 {
+    .cols-#{$i} {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+  }
+
+  @include gap-modifiers;
+}

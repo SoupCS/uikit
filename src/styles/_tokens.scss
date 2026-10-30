@@ -1,0 +1,31 @@
+@layer ui {
+  :root {
+    --ui-color-primary: #4f46e5;
+    --ui-color-primary-hover: #4338ca;
+    --ui-color-on-primary: #fff;
+    --ui-color-surface: #fff;
+    --ui-color-text: #111827;
+    --ui-color-border: #d1d5db;
+    --ui-color-danger: #dc2626;
+
+    --ui-radius-sm: 4px;
+    --ui-radius-md: 8px;
+
+    --ui-space-1: 4px;
+    --ui-space-2: 8px;
+    --ui-space-3: 12px;
+    --ui-space-4: 16px;
+  --ui-space-5: 24px;
+  --ui-space-6: 32px;
+
+    --ui-container-sm: 640px;
+  --ui-container-md: 960px;
+  --ui-container-lg: 1200px;
+
+  --ui-font-family: system-ui, -apple-system, sans-serif;
+    --ui-font-size-sm: 14px;
+    --ui-font-size-md: 16px;
+
+    --ui-transition: 150ms ease;
+  }
+}
